@@ -1,0 +1,19 @@
+<div>
+  <div class="card shadow-lg card-anim" style="width: 18rem;">
+    <div class="card-header">
+      <img [src]="ImagePath" class="card-img-top" alt=".">
+      <h5 class="card-title text-center">{{emoji["nom"]}}</h5>
+    </div>
+    <div class="card-body d-flex align-items-center flex-column">
+      <div class="form-check">
+        <input class="form-check-input text-center justify-self-center" type="checkbox" value="" id="flexCheckDefault"
+          [checked]="emoji.majeur" [(ngModel)]="checkBoxControl" (ngModelChange)="onValueChange($event)">
+        <label class="form-check-label text-center" for="flexCheckDefault">
+          majeur
+        </label>
+      </div>
+      <p class="card-text badge rounded-pill bg-warning text-dark" style="width: 100%;">Followers: {{emoji['nb']}}</p>
+      <a href="#" class="btn btn-primary" style="width: 100%;"> <i class="fas fa-pencil-alt"></i>follow</a>
+    </div>
+  </div>
+</div>
